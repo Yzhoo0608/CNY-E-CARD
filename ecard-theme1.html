@@ -1,0 +1,58 @@
+<!-- ecard-theme1.html -->
+<html>
+
+<head>
+  <!-- meta tags to display the contents and words properly-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Chinese New Year E-Card</title>
+  <link rel="stylesheet" href="styles-ecardtheme1.css">
+  <!-- link to the css theme file for the styling -->
+</head>
+
+<body>
+  <h1>Your Personalized Chinese New Year E-Card</h1>
+  <!-- Spring Couplets -->
+  <img src="Left spring couplet.png" alt="Left Spring Couplet" class="spring-couplet leftCouplet">
+  <img src="Right spring couplet.png" alt="Right Spring Couplet" class="spring-couplet rightCouplet">
+
+  <audio id="musicPlayer" src="cnysongs.mp3" loop></audio>
+  <!-- background music player and button to play and pause-->
+  <button onclick="toggleMusic()">🎵 Play/Pause Music</button>
+
+  <!-- postcard container to display the message entered by user-->
+  <div class="postcard">
+    <div id="messageOverlay" class="message-overlay"></div>
+  </div>
+
+  <!-- input field for the user to enter -->
+  <input type="text" id="senderName" placeholder="Sender's Name">
+  <input type="text" id="receiverName" placeholder="Receiver's Name">
+  <select id="builtInMessage">
+    <!-- wishing options to be chosen by user-->
+    <option value="Happy Chinese New Year!">Happy Chinese New Year!</option>
+    <option value="Gong Xi Fa Cai!">Gong Xi Fa Cai!</option>
+    <option value="Wishing you prosperity and good health!">Wishing you prosperity and good health! </option>
+    <option value="May wealth and happiness fill your home!">May wealth and happiness fill your home!
+    <option value="May the New Year bring you joy and success!">May the New Year bring you joy and success!</option>
+  </select>
+
+  <!-- input field for the user to enter custom message-->
+  <input type="text" id="customMessage" placeholder="Optional Message">
+  <button onclick="displayPostcard()">✨ Generate Postcard</button>
+
+  <!-- ornaments that can be clicked to show blessings-->
+  <div id="ornamentContainer">
+    <img src="ornament1.png" class="ornament" onclick="showBlessing('Good fortune shines upon you!')">
+    <img src="ornament2.png" class="ornament" onclick="showBlessing('Good luck!')">
+    <img src="ornament3.png" class="ornament" onclick="showBlessing('Full of joy and happiness!')">
+  </div>
+
+  <!-- button to allow user to share the link-->
+  <button id="shareBtn">Share Link</button>
+
+  <!-- link to the javascript file for the functions-->
+  <script src="script-ecard.js"></script>
+</body>
+
+</html>
